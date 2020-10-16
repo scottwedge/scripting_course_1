@@ -15,16 +15,27 @@ read -p "Enter a name: " VAL
 echo "You entered value of $VAL."
 
 # Simple IF statement
-if [ "$VAL" == "Scott" ]
-then
-   echo "Name matches"
-fi
+# if [ "$VAL" == "Scott" ]
+# then
+#    echo "Name matches"
+# fi
 
 # Simple IF-ELSE statement
-if [ "$NAME" == "$VAL" ]
+# if [ "$NAME" == "$VAL" ]
+# then
+#    echo "Name $VAL matches"
+# else
+#    echo "$NAME does not match $VAL"
+# fi
+
+# Simple ELSE-IF (elif) conditional statement
+if [ "$VAL" == "Brad" ]
 then
-   echo "Name $VAL matches"
+    echo "You entered Brad"
+elif [ "$VAL" == "Dave" ]
+then
+    echo "You entered Dave"
 else
-   echo "$NAME does not match $VAL"
+    echo "You entered something other than Brad or Dave"
 fi
 
