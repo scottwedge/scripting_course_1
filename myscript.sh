@@ -50,4 +50,18 @@ then
 elif [ "$VAL1" -gt "$VAL2" ]
 then
     echo "$VAL1 is greater than $VAL2"
+elif [ "$VAL1" -lt "$VAL2" ]
+then 
+    echo "$VAL1 is less than $VAL2"
+fi
+
+read -p "Enter third value: " VAL3
+read -p "Enter fourth value: " VAL4
+
+if [ "$VAL3" -le "$VAL4" ]
+then
+    echo "$VAL3 is less than or equal to $VAL4"
+elif [ "$VAL3" -ge "$VAL4" ]
+then
+    echo "$VAL3 is greater than or equal to $VAL4"
 fi
