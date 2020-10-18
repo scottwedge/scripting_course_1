@@ -44,9 +44,10 @@
 read -p "Enter first value: " VAL1
 read -p "Enter second value: " VAL2
 
-if [ "$VAL1" -gt "$VAL2" ]
+if [ "$VAL1" -eq "$VAL2" ]
+then
+    echo "$VAL1 equals $VAL2"
+elif [ "$VAL1" -gt "$VAL2" ]
 then
     echo "$VAL1 is greater than $VAL2"
-else
-    echo "$VAL1 is not greater than $VAL2"
 fi
