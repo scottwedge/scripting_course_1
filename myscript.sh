@@ -94,3 +94,13 @@ else
    echo "File $FILE does not exist so creating it ..."
    touch "$FILE"
 fi
+
+# If just created file (so size = 0) then check with '-s' and append data to file
+if [ -s "$FILE" ]
+then 
+    echo "File has content. Here is the content of file"
+    echo `cat $FILE`
+else
+    echo "File size is zero, so add date data to it"
+    date >> "$FILE"
+fi
