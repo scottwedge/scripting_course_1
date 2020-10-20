@@ -67,10 +67,30 @@
 # fi
 
 # Simple math inside double brackets "(( ))"
-read -p "Enter a value that will be doubled:" VAL5
-echo "You entered: $VAL5"
-echo "Double $VAL5 this value is: $((2*$VAL5))"
+# read -p "Enter a value that will be doubled:" VAL5
+# echo "You entered: $VAL5"
+# echo "Double $VAL5 this value is: $((2*$VAL5))"
 
-read -p "Enter first of two numbers to multiply: " VAL6
-read -p "Enter second of two numbers to multiply: " VAL7
-echo "Product of $VAL6 and $VAL7 is $(($VAL6 * $VAL7))"
+# read -p "Enter first of two numbers to multiply: " VAL6
+# read -p "Enter second of two numbers to multiply: " VAL7
+# echo "Product of $VAL6 and $VAL7 is $(($VAL6 * $VAL7))"
+
+# FILE CONDITIONS
+# -d file	True is file is a directory
+# -e file	True is file exists - but not portable so '-f' is used generally instead
+# -f file	True if is a file
+# -g file	True is groud id is set on a file
+# -r file	True is file is readable
+# -s file	True is file is non-zero size
+# -u file	True if user id is set on a file
+# -w file	True if file is writable
+
+
+FILE="/tmp/t"
+if [ -e "$FILE" ]
+then
+   echo "File exists"
+else
+   echo "File $FILE does not exist so creating it ..."
+   touch "$FILE"
+fi
