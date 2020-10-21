@@ -79,7 +79,7 @@
 # -d file	True is file is a directory
 # -e file	True is file exists - but not portable so '-f' is used generally instead
 # -f file	True if is a file
-# -g file	True is groud id is set on a file
+# -g file	True is group id is set on a file
 # -r file	True is file is readable
 # -s file	True is file is non-zero size
 # -u file	True if user id is set on a file
@@ -108,6 +108,9 @@ FILE="/tmp/t"
 if [ -d "$FILE" ]
 then
     echo "$FILE is a directory"
+elif [ -f "$FILE" ]
+then
+    echo "$FILE is a file"
 else
-    echo "$FILE is not a directory"
+    echo "$FILE is not a directory nor a file"
 fi
