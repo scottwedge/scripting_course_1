@@ -115,9 +115,13 @@ FILE="/tmp/t"
 #     echo "$FILE is not a directory nor a file"
 # fi
 
-if [ -r "$FILE" ]
+if [ -r "$FILE" ] && [ -w "$FILE" ]
+then
+    echo "File $FILE is readable and writable"
+elif [ -r "$FILE" ]
 then
     echo "File $FILE is readable"
-else
-    echo "File $FILE is not readable"
+# elif [ -w "$FILE" ]
+# then
+#     echo "File $FILE is writable"
 fi
