@@ -121,7 +121,9 @@ then
 elif [ -r "$FILE" ]
 then
     echo "File $FILE is readable"
-# elif [ -w "$FILE" ]
-# then
-#     echo "File $FILE is writable"
+elif [ -w "$FILE" ]
+then
+    echo "File $FILE is writable"
+else
+    echo "File is not readable nor writable"
 fi
