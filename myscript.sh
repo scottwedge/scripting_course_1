@@ -105,12 +105,19 @@ FILE="/tmp/t"
 #     date >> "$FILE"
 # fi
 
-if [ -d "$FILE" ]
+# if [ -d "$FILE" ]
+# then
+#     echo "$FILE is a directory"
+# elif [ -f "$FILE" ]
+# then
+#     echo "$FILE is a file"
+# else
+#     echo "$FILE is not a directory nor a file"
+# fi
+
+if [ -r "$FILE" ]
 then
-    echo "$FILE is a directory"
-elif [ -f "$FILE" ]
-then
-    echo "$FILE is a file"
+    echo "File $FILE is readable"
 else
-    echo "$FILE is not a directory nor a file"
+    echo "File $FILE is not readable"
 fi
