@@ -117,12 +117,12 @@ FILE="/tmp/t"
 
 if [ -e "$FILE" ]
 then
-    echo "File $FILE exists"
+    echo "File or directory $FILE exists" # Can be either file or directory
     if [ -s "$FILE" ]
     then
-        echo "File $FILE is non-zero in size"
+        echo "$FILE is non-zero in size"
     else
-        echo "File $FILE has size of 0"
+        echo "$FILE has size of 0"
     fi
 
 
