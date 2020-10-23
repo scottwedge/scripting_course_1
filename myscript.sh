@@ -118,6 +118,14 @@ FILE="/tmp/t"
 if [ -e "$FILE" ]
 then
     echo "File $FILE exists"
+    if [ -s "$FILE" ]
+    then
+        echo "File $FILE is non-zero in size"
+    else
+        echo "File $FILE has size of 0"
+    fi
+
+
 else
     echo "File $FILE does not exist"
 fi
