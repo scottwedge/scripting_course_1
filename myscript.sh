@@ -115,6 +115,13 @@ FILE="/tmp/t"
 #     echo "$FILE is not a directory nor a file"
 # fi
 
+if [ -e "$FILE" ]
+then
+    echo "File $FILE exists"
+else
+    echo "File $FILE does not exist"
+fi
+
 if [ -r "$FILE" ] && [ -w "$FILE" ]
 then
     echo "File $FILE is readable and writable"
