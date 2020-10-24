@@ -115,30 +115,41 @@ FILE="/tmp/t"
 #     echo "$FILE is not a directory nor a file"
 # fi
 
-if [ -e "$FILE" ]
-then
-    echo "File or directory $FILE exists" # Can be either file or directory
-    if [ -s "$FILE" ]
-    then
-        echo "$FILE is non-zero in size"
-    else
-        echo "$FILE has size of 0"
-    fi
+# if [ -e "$FILE" ]
+# then
+#     echo "File or directory $FILE exists" # Can be either file or directory
+#     if [ -s "$FILE" ]
+#     then
+#         echo "$FILE is non-zero in size"
+#     else
+#         echo "$FILE has size of 0"
+#     fi
 
 
-else
-    echo "File $FILE does not exist"
-fi
+# else
+#     echo "File $FILE does not exist"
+# fi
 
-if [ -r "$FILE" ] && [ -w "$FILE" ]
+# if [ -r "$FILE" ] && [ -w "$FILE" ]
+# then
+#     echo "File $FILE is readable and writable"
+# elif [ -r "$FILE" ]
+# then
+#     echo "File $FILE is readable"
+# elif [ -w "$FILE" ]
+# then
+#     echo "File $FILE is writable"
+# else
+#     echo "File is not readable nor writable"
+# fi
+
+# Check if file exists and delete if it does
+if [ -f "$FILE" ]
 then
-    echo "File $FILE is readable and writable"
-elif [ -r "$FILE" ]
+   rm "$FILE"
+   echo "File $FILE deleted"
+elif [ -d "$FILE" ]    # Check if directory exists and delete if so
 then
-    echo "File $FILE is readable"
-elif [ -w "$FILE" ]
-then
-    echo "File $FILE is writable"
-else
-    echo "File is not readable nor writable"
+   rmdir "$FILE"
+   echo "Deleted directory $FILE"
 fi
