@@ -143,14 +143,7 @@ FILE="/tmp/t"
 #     echo "File is not readable nor writable"
 # fi
 
-read -p "Delete file or directory if it exists? y/Y " REPLY
-if [ "$REPLY" == "y" ] || [ "$REPLY" == "Y" ]
-then
-    echo "Entered y or Y"
-else
-    echo "Entered $REPLY which is something other than y or Y"
-fi
-
+function delete {
 # Check if file exists and delete if it does
 if [ -f "$FILE" ]
 then
@@ -161,3 +154,14 @@ then
    rmdir "$FILE"
    echo "Deleted directory $FILE"
 fi
+}
+
+read -p "Delete file or directory if it exists? y/Y " REPLY
+if [ "$REPLY" == "y" ] || [ "$REPLY" == "Y" ]
+then
+    echo "Entered y or Y"
+    delete
+else
+    echo "Entered $REPLY which is something other than y or Y"
+fi
+
