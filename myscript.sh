@@ -162,16 +162,22 @@ else
 fi
 }
 
-read -p "Delete file or directory if it exists? Y/N " REPLY
-case "$REPLY" in
-  [yY] | [yY][eE][sS])
-    echo "Entered y or Y or yes"
-    delete
-    ;;
-  [nN] | [nN][oO])
-    echo "Entered $REPLY which is something other than y or Y"
-    ;;
-  *)
-    echo "Invalid input .... ignoring"
-    ;;
-esac
+# read -p "Delete file or directory if it exists? Y/N " REPLY
+# case "$REPLY" in
+#   [yY] | [yY][eE][sS])
+#     echo "Entered y or Y or yes"
+#     delete
+#     ;;
+#   [nN] | [nN][oO])
+#     echo "Entered $REPLY which is something other than y or Y"
+#     ;;
+#   *)
+#     echo "Invalid input .... ignoring"
+#     ;;
+# esac
+
+NAMES="Scott Mark Ed Steve"
+for NAME in $NAMES
+do
+   echo "Hello $NAME"
+done
