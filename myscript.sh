@@ -156,12 +156,16 @@ then
 fi
 }
 
-read -p "Delete file or directory if it exists? y/Y " REPLY
-if [ "$REPLY" == "y" ] || [ "$REPLY" == "Y" ]
-then
-    echo "Entered y or Y"
+read -p "Delete file or directory if it exists? Y/N " REPLY
+case "$REPLY" in
+  [yY] | [yY][eE][sS])
+    echo "Entered y or Y or yes"
     delete
-else
+    ;;
+  [nN] | [nN][oO])
     echo "Entered $REPLY which is something other than y or Y"
-fi
-
+    ;;
+  *)
+    echo "Invalid input .... ignoring"
+    ;;
+esac
