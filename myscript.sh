@@ -181,3 +181,10 @@ for NAME in $NAMES
 do
    echo "Hello $NAME"
 done
+
+read -p "Enter list of names to print: " INPUT_NAMES
+for N in $INPUT_NAMES
+do
+   echo "You entered: $N"
+done
+
