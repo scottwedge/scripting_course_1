@@ -145,14 +145,20 @@ FILE="/tmp/t"
 
 function delete {
 # Check if file exists and delete if it does
-if [ -f "$FILE" ]
-then
-   rm "$FILE"
-   echo "File $FILE deleted"
-elif [ -d "$FILE" ]    # Check if directory exists and delete if so
-then
-   rmdir "$FILE"
-   echo "Deleted directory $FILE"
+# Check if file exists
+if [ -e "$FILE" ]
+then 
+  if [ -f "$FILE" ]
+  then
+     rm "$FILE"
+     echo "File $FILE deleted"
+  elif [ -d "$FILE" ]    # Check if directory exists and delete if so
+  then
+     rmdir "$FILE"
+     echo "Deleted directory $FILE"
+  fi
+else
+  echo "$FILE does not exist so it cannot be deleted"
 fi
 }
 
