@@ -22,8 +22,13 @@
 #     statements
 # done
 
-until [ $j -gt 20 ]
+# until [ $j -gt 20 ]
+# do
+#   echo $j
+#   (( j++ ))
+# done
+
+for j in {1..10}
 do
   echo $j
-  (( j++ ))
 done
