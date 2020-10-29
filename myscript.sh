@@ -191,3 +191,8 @@ fi
 # create list of text files and print them
 FILES=$(ls *.txt)
 echo $FILES
+
+for FILE in $FILES
+do 
+  echo $FILE
+done
