@@ -197,14 +197,17 @@ do
   echo $FILE
 done
 
-# Rename files
+# Rename files several times
 NEW="new"
 
-for FILE in $FILES
+for j in {1..10}
 do
-  mv $FILE $NEW-$FILE
+  FILES=$(ls *.txt)
+  for FILE in $FILES
+  do
+    mv $FILE $NEW-$FILE
+  done
 done
-
 FILES=$(ls *.txt)
 echo $FILES
 
