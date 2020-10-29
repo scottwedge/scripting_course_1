@@ -196,3 +196,15 @@ for FILE in $FILES
 do 
   echo $FILE
 done
+
+# Rename files
+NEW="new"
+
+for FILE in $FILES
+do
+  mv $FILE $NEW-$FILE
+done
+
+FILES=$(ls *.txt)
+echo $FILES
+
