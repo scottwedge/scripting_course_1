@@ -189,25 +189,28 @@ fi
 # done
 
 # create list of text files and print them
-FILES=$(ls *.txt)
-echo $FILES
-
-for FILE in $FILES
-do 
-  echo $FILE
-done
+# FILES=$(ls *.txt)
+# echo $FILES
+# 
+# for FILE in $FILES
+# do 
+#   echo $FILE
+# done
 
 # Rename files several times
-NEW="new"
+# NEW="new"
 
-for j in {1..10}
-do
-  FILES=$(ls *.txt)
-  for FILE in $FILES
-  do
-    mv $FILE $NEW-$FILE
-  done
-done
+# for j in {1..10}
+# do
+#   FILES=$(ls *.txt)
+#   for FILE in $FILES
+#   do
+#     mv $FILE $NEW-$FILE
+#   done
+# done
+# FILES=$(ls *.txt)
+# echo $FILES
+
+# Output list of files into 'new-4.txt'
 FILES=$(ls *.txt)
-echo $FILES
-
+ls $FILES > new-4.txt
