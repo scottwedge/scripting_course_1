@@ -215,5 +215,7 @@ NEW="new"
 FILES=$(ls *.txt)
 ls $FILES > new-4.txt
 
-sed -i "s/$NEW//g" new-4.txt
+sed -i 's/$NEW//g' new-4.txt  
+#sed -i "s/$NEW//g" new-4.txt  # only works with double quotes
 
+cat new-4.txt
