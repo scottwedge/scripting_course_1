@@ -198,7 +198,7 @@ fi
 # done
 
 # Rename files several times
-# NEW="new"
+NEW="new"
 
 # for j in {1..10}
 # do
@@ -214,3 +214,6 @@ fi
 # Output list of files into 'new-4.txt'
 FILES=$(ls *.txt)
 ls $FILES > new-4.txt
+
+sed -i "s/$NEW//g" new-4.txt
+
