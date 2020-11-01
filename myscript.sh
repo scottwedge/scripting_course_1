@@ -212,10 +212,25 @@ NEW="new"
 # echo $FILES
 
 # Output list of files into 'new-4.txt'
-FILES=$(ls *.txt)
-ls $FILES > new-4.txt
+# FILES=$(ls *.txt)
+# ls $FILES > new-4.txt
 
-sed -i 's/$NEW//g' new-4.txt  
+# sed -i 's/$NEW//g' new-4.txt  
 #sed -i "s/$NEW//g" new-4.txt  # only works with double quotes
 
-cat new-4.txt
+# cat new-4.txt
+
+# IF file exists then rename it
+FILE1="new-1.txt"
+FILE2="new-2.txt"
+
+if [ -f $FILE1 ]
+then
+   mv $FILE1 "n-1.txt"
+fi
+
+
+if [ -f $FILE2 ]
+then
+   mv $FILE2 n-2.txt
+fi
