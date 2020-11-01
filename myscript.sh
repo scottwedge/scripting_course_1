@@ -224,7 +224,8 @@ NEW="new"
 FILE1="new-1.txt"
 FILE2="new-2.txt"
 FILE3='new-3.txt'
-echo $FILE1 $FILE2 $FILE3
+
+# echo $FILE1 $FILE2 $FILE3
 
 if [ -f $FILE1 ]
 then
@@ -237,7 +238,10 @@ then
    mv $FILE2 n-2.txt
 fi
 
-if [ -f '$FILE3' ]
+if [ -f "$FILE3" ]
 then
-   mv '$FILE3' 'n-3.txt'
+   echo '"$FILE3" exists'
+   mv "$FILE3" n-3.txt
+else
+   echo '"$FILE3" does not exist'
 fi
