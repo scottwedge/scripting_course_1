@@ -223,6 +223,8 @@ NEW="new"
 # IF file exists then rename it
 FILE1="new-1.txt"
 FILE2="new-2.txt"
+FILE3='new-3.txt'
+echo $FILE1 $FILE2 $FILE3
 
 if [ -f $FILE1 ]
 then
@@ -233,4 +235,9 @@ fi
 if [ -f $FILE2 ]
 then
    mv $FILE2 n-2.txt
+fi
+
+if [ -f '$FILE3' ]
+then
+   mv '$FILE3' 'n-3.txt'
 fi
