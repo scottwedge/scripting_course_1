@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Check if optional parameter exists else default to current directory
-echo "$#"
+echo "Command has $# parameters ... needs at least one that is a directory where files can be listed"
 
 if [ $# -ge 1 ]
 then
