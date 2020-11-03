@@ -11,11 +11,9 @@ then
     echo $value
   done
 else
-	echo " No optional parameters so defaulting to current directory: $(pwd)"
+  echo " No optional parameters so defaulting to current directory: $(pwd)"
   for value in *
   do
     echo $value
   done
 fi
-
-
