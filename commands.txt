@@ -1,0 +1,34 @@
+# Useful Docker commands
+
+docker --help
+docker images
+docker ps
+docker container run -it -publish 80:80 nginx
+docker container ls -a
+docker container run -d -p 8081:80 --name mynginx nginx
+docker container run -d -p 8082:80 --name myappache httpd
+docker pull bash
+docker pull python
+docker run --help
+docker image ls
+docker run -e HELLO="ScottW" --name bash-1 bash
+docker container run -e HELLO="ScottW" -it --name bash2 bash
+docker container run -d -p 3306:3306 --name mysql --env MYSQL_ROOT_PASSWORD=123456 mysql
+docker container run -it --name python mypython
+docker container run -it -n myubuntu ubuntu
+docker container run -it --name myubuntu ubuntu
+docker container run -d -p 8085:80 -v $(pwd):/usr/share/nginx/html --name nginx-website nginx
+docker container run -d -p 8085:80 -v $(pwd):/usr/share/nginx/html --name nginx-website nginx
+docker container exec -it -v $(pwd):/usr/share/nginx/html mynginx bash
+docker container exec -it -v $(pwd):/usr/share/nginx/html --name mynginx nginx
+docker container -d -v $(pwd):/usr/share/nginx/html --name mynginx nginx
+docker container -d -p 8085:80 -v $(pwd):/usr/share/nginx/html --name mynginx nginx
+docker image rm nginx:latest  scottwedge/nginx-website:latest 
+docker image rm  scottwedge/nginx-website:latest nginx:latest 
+docker image rm scottwedge/nginx-website:nov3 
+docker image build -t scottwedge/nginx-website:nov3 .
+docker build -t scottwedge/nginx-web5 .
+docker image build -t scottwedge/nginx-web6 -f Dockerfile6 .
+docker image build -t scottwedge/nginx-web7 Dockerfile7 .
+docker image build -t scottwedge/nginx-web7 -f  Dockerfile7 .
+docker image list
