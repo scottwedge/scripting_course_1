@@ -1,8 +1,0 @@
-# first comment
-# second comment
-
-FROM nginx:latest
-
-WORKDIR /usr/share/nginx/html
-
-COPY . .
